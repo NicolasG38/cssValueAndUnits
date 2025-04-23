@@ -110,6 +110,14 @@ header > #back-to-top {
 	justify-content: end;
 	align-items: center;
 	width: 40vw;
+	& > a {
+		&::after {
+			content: "Back to top";
+			display: flex;
+			font-weight: 200;
+			font-size: 0.6rem;
+		}
+	}
 }
 main {
 	& > h1 {
