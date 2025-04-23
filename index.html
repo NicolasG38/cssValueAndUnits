@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="tables.html">Tables</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>CSS Values & Units</h1>
+        <section class="section-x-height">
+            <figure>
+                <img id="x-height" src="Typography_Line_Terms.svg" alt="">
+                <figcaption>Common typographic metrics</figcaption>
+            </figure>
+        </section>
+        <p id="x-height-description">In typography, the x-height, or corpus size, is the distance between the baseline and the mean line of lowercase letters in a typeface. Typically, this is the height of the letter x in the font (the source of the term), as well as the letters v, w, and z. (Curved letters such as a, c, e, m, n, o, r, s, and u tend to exceed the x-height slightly, due to overshoot; i has a dot that tends to go above x-height.) One of the most important dimensions of a font, x-height defines how high lowercase letters without ascenders are compared to the cap height of uppercase letters.</p>
+        <h2>Relative Units Length</h2>
+        <section id="tr-relative-table">
+            <table>
+                <tbody >
+                    <tr id="tr-relative-up">
+                        <td class="select-option">em</td>
+                        <td class="select-option">ex</td>
+                        <td class="select-option">cap</td>
+                        <td class="select-option">ch</td>
+                        <td class="select-option">ic</td>                            <td class="select-option">lh</td>
+                    </tr>
+                    <tr id="tr-relative-down">
+                        <td class="select-option">rem</td>
+                        <td class="select-option">rex</td>
+                        <td class="select-option">rcap</td>
+                        <td class="select-option">rch</td>
+                        <td class="select-option">ric</td>
+                        <td class="select-option">rlh</td>
+                    </tr>
+                </tbody>
+            </table>
+            <caption>Font-relative Lengths units</caption>
+        </section>
+        <section id="select-relative">
+            <label for=""></label>
+            <input type="number" value="2" id="input-relative">
+            <select name="" id="select-option-relative" >
+                <option value="em">em</option>
+                <option value="rem">rem</option>
+                <option value="ex">ex</option>
+                <option value="rex">rex</option>
+                <option value="cap">cap</option>
+                <option value="rcap">rcap</option>
+                <option value="ch">ch</option>
+                <option value="rch">rch</option>
+                <option value="ic">ic</option>
+                <option value="ric">ric</option>
+                <option value="lh">lh</option>
+                <option value="rlh">rlh</option>
+            </select>
+            <button type="button" id="btn-relative">Abracadabra !</button>
+            <p id="select-relative-example">font-size :1em; </p>
+        </section>
+        <h2 class="title">Viewport-percentage Length</h2>
+        <section id="tr-vp-table">
+            <table>
+                <tbody>
+                    <tr id="tr-vp">
+                        <td>vw</td>
+                        <td>vh</td>
+                        <td>vi</td>
+                        <td>vb</td>
+                        <td>vmin</td>
+                        <td>vmax</td>
+                    </tr>
+                </tbody>
+            </table>
+            <caption>Viewport-percentage Lengths units</caption>
+        </section>
+        <section id="select-vp">
+            <label for=""></label>
+            <input type="number" value="2" id="input-vp">
+            <select name="" id="select-option-vp" >
+                <option value="vw">vw</option>
+                <option value="vh">vh</option>
+                <option value="vi">vi</option>
+                <option value="vb">vb</option>
+                <option value="vmin">vmin</option>
+                <option value="vmax">vmax</option>
+            </select>
+            <button type="button" id="btn-vp">Abracadabra !</button>
+            <p id="select-vp-example">font-size :1vw; </p>
+        </section>
+
+        <h2 class="title">Absolute Lengths</h2>
+        <section id="tr-absolute-table">
+            <table>
+                <tbody>
+                    <tr id="select-absolute">
+                        <td>cm</td>
+                        <td>mm</td>
+                        <td>Q</td>
+                        <td>in</td>
+                        <td>pc</td>
+                        <td>pt</td>
+                        <td>px</td>
+                    </tr>
+                </tbody>
+            </table>
+            <caption>Absolute Lengths units</caption>
+        </section>
+        <section id="select-vp">
+            <label for=""></label>
+            <input type="number" value="2" id="input-absolute">
+            <select name="" id="select-option-absolute" >
+                <option value="cm">cm</option>
+                <option value="mm">mm</option>
+                <option value="Q">Q</option>
+                <option value="in">in</option>
+                <option value="pc">pc</option>
+                <option value="pt">pt</option>
+                <option value="px">pt</option>
+            </select>
+            <button type="button" id="btn-absolute">Abracadabra !</button>
+            <p id="select-absolute-example">font-size :1cm; </p>
+        </section>
+
+
+        <h2 class="title">Angle Units</h2>
+        <section id="tr-angle-table">
+            <table>
+                <tbody>
+                    <tr id="select-angle">
+                        <td>deg</td>
+                        <td>grad</td>
+                        <td>rad</td>
+                        <td>turn</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <caption>Angle units</caption>
+        <section id="select-angle">
+            <label for=""></label>
+            <input type="number" value="20" min="0" id="input-angle">
+            <select name="" id="select-option-angle" >
+                <option value="deg">deg</option>
+                <option value="grad">grad</option>
+                <option value="rad">rad</option>
+                <option value="turn">turn</option>
+            </select>
+            <button type="button" id="btn-angle">Abracadabra !</button>
+            <div id="select-angle-example"></div>
+        </section>
+
+
+
+        <h2 class="title">Resolution Units</h2>
+        <section id="tr-resolution-table">
+            <table>
+                <tbody>
+                    <tr id="select-resolution">
+                        <td>dpi</td>
+                        <td>dpcm</td>
+                        <td>dppx</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <caption>Resolution units</caption>
+
+        <h2 class="title">Duration Units</h2>
+        <section id="tr-duration-table">
+            <table >
+                <tbody>
+                    <tr id="select-duration">
+                            <td>s</td>
+                            <td>ms</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <caption>Angle units</caption>
+        <section id="select-duration">
+            <label for=""></label>
+            <input type="number" value="2" min="0" id="input-duration">
+            <select name="" id="select-option-duration" >
+                <option value="s">s</option>
+                <option value="ms">ms</option>
+            </select>
+            <button type="button" id="btn-duration">Abracadabra !</button>
+            <button type="button" id="btn-duration-hide">Hide picture</button>
+        </section>
+        <img src="hanny-naibaho-D_LYjtHnDXE-unsplash.jpg" alt="DJ en train de mixer dans festival" id="select-duration-example">
+    </main> 
+</body>
+    <footer>
+        <section>        
+            <p>2025 Tech Review</p>
+            <p>Website build with ♥️ by : <a href="http://www.thelazyagency.com" target="_blank" rel="noopenerer">&copy;TheLazyAgency.com</a></p>
+            <section>
+                <p>follow me on : </p>
+                <section> 
+                    <a href="https://www.linkedin.com/in/nicolasgirard38/"><img src="InBug-White.png" alt="logo LinkedIn"></a>
+                    <a href="https://www.instagram.com/thelazyagency/"><img src="Instagram_Glyph_White.png" alt="logo LinkedIn"></a>
+                    <a href="https://www.threads.net/@thelazyagency"><img src="threads-logo-white-01.png" alt="logo LinkedIn"></a>
+                </section>
+            </section>
+        </section>
+<!-- LOGOS -->
+        <section class="logos">
+            <fieldset>
+                <legend>software & tools</legend>
+                <section class="logos-parameters">
+                    <section class="adobe">
+    <!-- PHOTOSHOP -->
+                        <a class="photoshop-link" href="https://www.adobe.com/fr/products/photoshop.html#" target="_blank" rel="noopenerer">
+                            <svg class="logo-social photoshop-logo" version="1.1" viewBox="0 0 240 234">
+                                <g id="Layer_2">
+                                    <g id="Surfaces">
+                                        <g id="Photo_Surface">
+                                            <g id="Outline_no_shadow">
+                                                <path class="photoshop0" d="M42.5,0h155c23.5,0,42.5,19,42.5,42.5v149c0,23.5-19,42.5-42.5,42.5H42.5c-23.5,0-42.5-19-42.5-42.5V42.5C0,19,19,0,42.5,0Z"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <g id="Outlined_Mnemonics_Logos">
+                                        <g id="Ps">
+                                            <path class="photoshop1" d="M54,164.1V61.2c0-.7.3-1.1,1-1.1,1.7,0,3.3,0,5.6-.1,2.4-.1,4.9-.1,7.6-.2,2.7-.1,5.6-.1,8.7-.2,3.1-.1,6.1-.1,9.1-.1,8.2,0,15,1,20.6,3.1,5,1.7,9.6,4.5,13.4,8.2,3.2,3.2,5.7,7.1,7.3,11.4,1.5,4.2,2.3,8.5,2.3,13,0,8.6-2,15.7-6,21.3s-9.6,9.8-16.1,12.2c-6.8,2.5-14.3,3.4-22.5,3.4-2.4,0-4,0-5-.1s-2.4-.1-4.3-.1v32.1c.1.7-.4,1.3-1.1,1.4h-19.4c-.8,0-1.2-.4-1.2-1.3ZM75.8,79.4v33.6c1.4.1,2.7.2,3.9.2h5.3c3.9,0,7.8-.6,11.5-1.8,3.2-.9,6-2.8,8.2-5.3,2.1-2.5,3.1-5.9,3.1-10.3.1-3.1-.7-6.2-2.3-8.9-1.7-2.6-4.1-4.6-7-5.7-3.7-1.5-7.7-2.1-11.8-2-2.6,0-4.9,0-6.8.1-2-.1-3.4,0-4.1.1h0Z"/>
+                                            <path class="photoshop1" d="M192,106.9c-3-1.6-6.2-2.7-9.6-3.4-3.7-.8-7.4-1.3-11.2-1.3-2-.1-4.1.2-6,.7-1.3.3-2.4,1-3.1,2-.5.8-.8,1.8-.8,2.7s.4,1.8,1,2.6c.9,1.1,2.1,2,3.4,2.7,2.3,1.2,4.7,2.3,7.1,3.3,5.4,1.8,10.6,4.3,15.4,7.3,3.3,2.1,6,4.9,7.9,8.3,1.6,3.2,2.4,6.7,2.3,10.3.1,4.7-1.3,9.4-3.9,13.3-2.8,4-6.7,7.1-11.2,8.9-4.9,2.1-10.9,3.2-18.1,3.2-4.6,0-9.1-.4-13.6-1.3-3.5-.6-7-1.7-10.2-3.2-.7-.4-1.2-1.1-1.1-1.9v-17.4c0-.3.1-.7.4-.9.3-.2.6-.1.9.1,3.9,2.3,8,3.9,12.4,4.9,3.8,1,7.8,1.5,11.8,1.5s6.5-.5,8.3-1.4c1.6-.7,2.7-2.4,2.7-4.2,0-1.4-.8-2.7-2.4-4-1.6-1.3-4.9-2.8-9.8-4.7-5.1-1.8-9.8-4.2-14.2-7.2-3.1-2.2-5.7-5.1-7.6-8.5-1.6-3.2-2.4-6.7-2.3-10.2,0-4.3,1.2-8.4,3.4-12.1,2.5-4,6.2-7.2,10.5-9.2,4.7-2.4,10.6-3.5,17.7-3.5,4.1,0,8.3.3,12.4.9,3,.4,5.9,1.2,8.6,2.3.4.1.8.5,1,.9.1.4.2.8.2,1.2v16.3c0,.4-.2.8-.5,1-.9.2-1.4.2-1.8,0Z"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+    <!-- ILLUSTRATOR -->
+                        <a class="illustrator-link" href="https://www.adobe.com/fr/products/illustrator.html" target="_blank" rel="noopenerer">
+                            <svg id="illustrator-logo" class="logo-social" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 240 234">
+                            <path class="illustrator1" d="M42.5,0h155c23.5,0,42.5,19,42.5,42.5v149c0,23.5-19,42.5-42.5,42.5H42.5c-23.5,0-42.5-19-42.5-42.5V42.5C0,19,19,0,42.5,0Z"/>
+                            <path class="illustrator0" d="M116,140h-37.2l-7.6,23.5c-.2.9-1,1.5-1.9,1.4h-18.8c-1.1,0-1.4-.6-1.1-1.8l32.2-92.7c.3-1,.6-2.1,1-3.3.4-2.1.6-4.3.6-6.5-.1-.5.3-1,.8-1.1h25.9c.8,0,1.2.3,1.3.8l36.5,103c.3,1.1,0,1.6-1,1.6h-20.9c-.7.1-1.4-.4-1.6-1.1l-8.2-23.8ZM84.6,119.7h25.4c-.6-2.1-1.4-4.6-2.3-7.2-.9-2.7-1.8-5.6-2.7-8.6-1-3.1-1.9-6.1-2.9-9.2s-1.9-6-2.7-8.9c-.8-2.8-1.5-5.4-2.2-7.8h-.2c-.9,4.3-2,8.6-3.4,12.9-1.5,4.8-3,9.8-4.6,14.8-1.4,5.1-2.9,9.8-4.4,14ZM170,77c-3.3.1-6.5-1.2-8.9-3.5-2.3-2.5-3.5-5.8-3.4-9.2-.1-3.4,1.2-6.6,3.6-8.9s5.6-3.5,8.9-3.5c3.9,0,6.9,1.2,9.1,3.5,2.2,2.4,3.4,5.6,3.3,8.9.1,3.4-1.1,6.7-3.5,9.2-2.3,2.4-5.7,3.7-9.1,3.5h0ZM158.8,163.8v-77c0-1,.4-1.4,1.3-1.4h19.8c.9,0,1.3.5,1.3,1.4v77c0,1.1-.4,1.6-1.3,1.6h-19.6c-1,0-1.5-.6-1.5-1.6Z"/>
+                            </svg>
+                        </a>
+                    </section>
+                    <section class="microsoft">
+    <!-- VSC -->
+                        <a class="VSC-link" href="https://code.visualstudio.com/" target="_blank" rel="noopenerer">
+                            <svg id="VSC-logo" class="logo-social" version="1.1" viewBox="0 0 100 100">
+                                <defs>
+                                    <mask id="mask" x="-.06" y=".26" width="100.06" height="99.48" maskUnits="userSpaceOnUse">
+                                        <g id="mask0">
+                                            <path class="VSC-logo1" d="M70.91,99.32c1.57.61,3.37.57,4.96-.19l20.59-9.91c2.16-1.04,3.54-3.23,3.54-5.63V16.41c0-2.4-1.38-4.59-3.54-5.63L75.87.87c-2.09-1-4.53-.76-6.36.57-.26.19-.51.4-.74.64L29.36,38.04l-17.17-13.03c-1.6-1.21-3.83-1.11-5.32.24l-5.51,5.01c-1.82,1.65-1.82,4.51,0,6.16l14.89,13.58L1.36,63.58c-1.81,1.65-1.81,4.51,0,6.16l5.51,5.01c1.48,1.35,3.72,1.45,5.32.24l17.17-13.03,39.41,35.96c.62.62,1.36,1.09,2.14,1.4ZM75.02,27.3l-29.91,22.7,29.91,22.7V27.3Z"/>
+                                        </g>
+                                    </mask>
+                                    <linearGradient id="VSC-grandient" data-name="VSC-grandient" x1="49.94" y1="101.74" x2="49.94" y2="2.26" gradientTransform="translate(0 102) scale(1 -1)" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-color="#fff"/>
+                                        <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                                <g class="VSC-logo4">
+                                    <g id="Calque_1">
+                                        <g class="VSC-logo0">
+                                            <path class="VSC-logo7" d="M96.46,10.8L75.86.88c-2.39-1.15-5.24-.66-7.11,1.21L1.3,63.58c-1.81,1.65-1.81,4.51,0,6.16l5.51,5.01c1.49,1.35,3.72,1.45,5.32.24L93.36,13.37c2.73-2.07,6.64-.12,6.64,3.3v-.24c0-2.4-1.38-4.59-3.54-5.63Z"/>
+                                            <path class="VSC-logo5" d="M96.46,89.2l-20.6,9.92c-2.39,1.15-5.24.66-7.11-1.21L1.3,36.42c-1.81-1.65-1.81-4.51,0-6.16l5.51-5.01c1.49-1.35,3.72-1.45,5.32-.24l81.23,61.62c2.73,2.07,6.64.12,6.64-3.3v.24c0,2.4-1.38,4.59-3.54,5.63Z"/>
+                                            <path class="VSC-logo3" d="M75.86,99.13c-2.39,1.15-5.24.66-7.11-1.21,2.31,2.31,6.25.67,6.25-2.59V4.67c0-3.26-3.94-4.9-6.25-2.59,1.87-1.87,4.72-2.36,7.11-1.21l20.6,9.91c2.16,1.04,3.54,3.23,3.54,5.63v67.17c0,2.4-1.38,4.59-3.54,5.63l-20.6,9.91Z"/>
+                                            <g class="VSC-logo6">
+                                                <path class="VSC-logo2" d="M70.85,99.32c1.58.61,3.37.57,4.96-.19l20.59-9.91c2.16-1.04,3.54-3.23,3.54-5.63V16.41c0-2.4-1.38-4.59-3.54-5.63L75.81.87c-2.09-1-4.53-.76-6.36.57-.26.19-.51.4-.74.64L29.29,38.04l-17.17-13.03c-1.6-1.21-3.83-1.11-5.32.24l-5.51,5.01c-1.82,1.65-1.82,4.51,0,6.16l14.89,13.58L1.3,63.58c-1.81,1.65-1.81,4.51,0,6.16l5.51,5.01c1.48,1.35,3.72,1.45,5.32.24l17.17-13.03,39.41,35.96c.62.62,1.36,1.09,2.14,1.4ZM74.95,27.3l-29.91,22.7,29.91,22.7V27.3Z"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+    <!--POWERPOINT-->
+                        <a class="powerpoint-link" href="https://www.microsoft.com/fr-fr/microsoft-365/powerpoint" target="_blank" rel="noopenerer">
+                        <svg id="powerpoint-logo" class="logo-social" version="1.1" viewBox="0 0 1919.95 1786">
+                            <defs>
+                                <linearGradient id="powerpoint-logo-gradiant" data-name="powerpoint-logo-gradiant" x1="170.65" y1="549.9" x2="811.65" y2="1660.1" gradientTransform="translate(0 -212)" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#ca4c28"/>
+                                <stop offset=".5" stop-color="#c5401e"/>
+                                <stop offset="1" stop-color="#b62f14"/>
+                                </linearGradient>
+                            </defs>
+                            <path class="powerpoint-logo6" d="M1160.9,982.3L1026.95,0h-10C529.87,1.42,135.37,395.92,133.95,883v10l1026.95,89.3Z"/>
+                            <path class="powerpoint-logo2" d="M1036.95,0h-10v893l446.5,178.6,446.5-178.6v-10C1918.53,395.92,1524.03,1.42,1036.95,0Z"/>
+                            <path class="powerpoint-logo5" d="M1919.95,893v9.82c-1.4,487.19-395.99,881.78-883.18,883.18h-19.65c-487.18-1.4-881.78-395.99-883.18-883.18v-9.82h1786Z"/>
+                            <path class="powerpoint-logo0" d="M1071.6,438.91v952.83c-.22,33.11-20.29,62.85-50.9,75.46-9.75,4.12-20.22,6.25-30.81,6.25H344.7c-12.5-14.29-24.56-29.47-35.72-44.65-113.76-151.75-175.18-336.32-175.03-525.98v-19.65c-.26-171.06,49.73-338.43,143.77-481.33,9.82-15.18,20.09-30.36,31.26-44.65h680.91c44.99.34,81.37,36.73,81.71,81.71Z"/>
+                            <path class="powerpoint-logo1" d="M1026.95,483.56v952.83c0,10.58-2.13,21.06-6.25,30.81-12.61,30.61-42.35,50.68-75.46,50.9H385.33c-14.13-14.34-27.68-29.24-40.63-44.65-12.5-14.29-24.56-29.47-35.72-44.65-113.76-151.75-175.18-336.33-175.03-525.98v-19.65c-.26-171.06,49.73-338.43,143.77-481.33h667.52c44.99.34,81.37,36.72,81.71,81.71Z"/>
+                            <path class="powerpoint-logo1" d="M1026.95,483.56v863.53c-.34,44.98-36.72,81.37-81.71,81.71H308.98c-113.76-151.75-175.18-336.32-175.03-525.98v-19.65c-.26-171.06,49.73-338.43,143.77-481.33h667.52c44.99.34,81.37,36.72,81.71,81.71Z"/>
+                            <path class="powerpoint-logo1" d="M982.3,483.56v863.53c-.34,44.98-36.72,81.37-81.71,81.71H308.98c-113.76-151.75-175.18-336.32-175.03-525.98v-19.65c-.26-171.06,49.73-338.43,143.77-481.33h622.87c44.99.34,81.37,36.72,81.71,81.71Z"/>
+                            <path class="powerpoint-logo4" d="M81.84,401.85h818.61c45.2,0,81.84,36.64,81.84,81.84v818.61c0,45.2-36.64,81.84-81.84,81.84H81.84c-45.2,0-81.84-36.64-81.84-81.84V483.69c0-45.2,36.64-81.84,81.84-81.84Z"/>
+                            <path class="powerpoint-logo3" d="M500.08,620.14c53.29-3.6,106.12,11.88,149.04,43.67,35.8,31.96,54.93,78.6,51.88,126.49.59,33.29-8.29,66.07-25.58,94.52-17.51,27.96-42.74,50.26-72.65,64.21-34.19,15.9-71.56,23.75-109.26,22.95h-103.54v192.44h-106.04v-544.28h216.15ZM389.88,888.85h91.26c28.93,2.12,57.64-6.44,80.68-24.07,19.06-18.28,29.05-44.06,27.28-70.41,0-59.98-34.86-89.97-104.57-89.97h-94.66v184.45h0Z"/>
+                        </svg>
+                        </a>
+    <!-- GITHUB -->
+                        <a class="github-link" href="https://github.com/" target="_blank" rel="noopenerer">
+                        <svg id="github-logo" class="logo-social" version="1.1" viewBox="0 0 97.6 96">
+                        <defs>
+                            <style>
+
+                            </style>
+                        </defs>
+                        <path class="github0" d="M48.9,0C21.8,0,0,22,0,49.2c0,21.8,14,40.2,33.4,46.7,2.4.5,3.3-1.1,3.3-2.4,0-1.1-.1-5.1-.1-9.1-13.6,2.9-16.4-5.9-16.4-5.9-2.2-5.7-5.4-7.2-5.4-7.2-4.4-3,.3-3,.3-3,4.9.3,7.5,5.1,7.5,5.1,4.4,7.5,11.4,5.4,14.2,4.1.4-3.2,1.7-5.4,3.1-6.6-10.8-1.1-22.2-5.4-22.2-24.3,0-5.4,1.9-9.8,5-13.2-.5-1.2-2.2-6.3.5-13,0,0,4.1-1.3,13.4,5.1,3.9-1.1,8.1-1.6,12.2-1.6s8.3.6,12.2,1.6c9.3-6.4,13.4-5.1,13.4-5.1,2.7,6.8,1,11.8.5,13,3.2,3.4,5,7.8,5,13.2,0,18.9-11.4,23.1-22.3,24.3,1.8,1.5,3.3,4.5,3.3,9.1,0,6.6-.1,11.9-.1,13.5,0,1.3.9,2.9,3.3,2.4,19.5-6.5,33.5-24.9,33.5-46.7.1-27.2-21.8-49.2-48.7-49.2Z"/>
+                        </svg>
+                        </a>
+                    </section>
+                    <section class="mozilla">
+    <!-- MDN -->
+                        <a class="mdn-link" href="https://developer.mozilla.org/fr/" target="_blank" rel="noopenerer">
+                            <svg id="mdn-logo" class="logo-social mdn-logo" version="1.1" viewBox="0 0 361 104.2">
+                                <g>
+                                    <path class="mdn-logo0" d="M40.3,0L11.7,92.1H0L28.5,0h11.8Z"/>
+                                    <path class="mdn-logo0" d="M50.7,0v92.1h-10.4V0h10.4Z"/>
+                                    <path class="mdn-logo0" d="M101.4,0v92.1h-10.4V0h10.4Z"/>
+                                    <path class="mdn-logo0" d="M91,0l-28.5,92.1h-11.7L79.3,0h11.7Z"/>
+                                    <path class="mdn-logo0" d="M294,95.4h67v8.8h-67v-8.8Z"/>
+                                </g>
+                                <g>
+                                    <path class="mdn-logo1" d="M198.7,72.8h-17.1v-5.5h3.8v-15.8c0-3.7-.7-6.3-2.1-7.9-1.4-1.6-3.3-2.3-5.7-2.3-3.2,0-5.6,1.1-7.2,3.4s-2.4,4.6-2.5,6.9v15.6h6v5.5h-17.1v-5.5h3.8v-15.7c0-3.8-.7-6.4-2.1-7.9-1.4-1.5-3.3-2.3-5.6-2.3-3.2,0-5.5,1.1-7.2,3.3-1.6,2.2-2.4,4.5-2.5,6.9v15.8h6.9v5.5h-20.2v-5.5h6v-25.3h-6.1v-5.6h13.4v6.4c1.2-2.1,2.7-3.8,4.7-5.2,2-1.3,4.4-2,7.3-2s5.3.7,7.5,2.1c2.2,1.4,3.7,3.5,4.5,6.4,1.1-2.5,2.7-4.5,4.9-6.1s4.8-2.4,7.9-2.4c3.5,0,6.5,1.1,8.9,3.3s3.7,5.6,3.7,10.2v18.2h6.1v5.5h0Z"/>
+                                    <path class="mdn-logo1" d="M241.2,72.8h-13.2v-7.2c-1.2,2.2-2.8,4.1-4.9,5.6-2.1,1.6-4.8,2.4-8.3,2.4-4.8,0-8.7-1.6-11.6-4.9-2.9-3.2-4.3-7.7-4.3-13.3,0-5,1.3-9.6,4-13.7,2.6-4.1,6.9-6.2,12.8-6.2s9.8,2.2,12.3,6.5v-19.7h-8.6v-5.6h15.8v50.6h6v5.5ZM227.9,56v-4.4c-.1-3-1.2-5.5-3.2-7.3s-4.4-2.8-7.2-2.8c-3.6,0-6.3,1.3-8.2,3.9-1.9,2.6-2.8,5.8-2.8,9.6,0,4.1,1,7.3,3,9.5,2,2.2,4.5,3.3,7.4,3.3,3.2,0,5.8-1.3,7.8-3.8,2.1-2.6,3.1-5.3,3.2-8Z"/>
+                                    <path class="mdn-logo1" d="M286.4,72.8h-19.3v-5.5h6v-15.8c0-3.7-.7-6.3-2.2-7.9-1.4-1.6-3.4-2.3-5.7-2.3-3.1,0-5.6,1-7.4,3-1.8,2-2.8,4.4-2.9,7v15.9h6v5.5h-19.3v-5.5h6v-25.2h-6.2v-5.6h13.6v6.2c2.6-4.6,6.8-6.9,12.7-6.9,3.6,0,6.7,1.1,9.2,3.3s3.7,5.6,3.7,10.2v18.2h6v5.4h-.2Z"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </section>
+                    <section class="unsplash">
+    <!-- UNSPLASH+ -->
+                        <a class="unsplash-link" href="https://unsplash.com/" target="_blank" rel="noopenerer">
+                            <svg id="Unsplash" class="logo-social unsplash-logo" version="1.1" viewBox="0 0 1611.24 313.45">
+                                <path class="Unsplash0" d="M1220.65,243.55v-98.82c0-21,13.08-36.5,31.68-36.5,17.56,0,27.89,13.43,27.89,35.81v99.51h49.93v-106.74c0-40.63-21.35-67.83-59.57-67.83-26.51,0-42.35,12.74-50.96,27.89,1.03-6.54,1.03-11.02,1.03-15.5V2.52h-49.93v241.03h49.93ZM1079.14,249.75c45.8,0,75.06-23.76,75.06-56.82,0-30.99-23.07-45.8-55.09-51.99l-22.73-4.82c-18.25-3.44-24.1-7.92-24.1-16.18,0-10.33,10.67-15.5,23.76-15.5,16.18,0,26.17,9.64,27.55,23.07h49.58c-1.38-34.78-29.96-58.54-76.79-58.54-43.39,0-72.31,22.73-72.31,52.68s20.66,45.45,54.41,52.34l23.76,4.82c15.5,3.1,23.07,7.57,23.07,16.87,0,11.02-10.33,18.59-26.17,18.59-19.28,0-29.96-11.36-30.65-28.24h-50.27c2.06,38.58,32.37,63.72,80.92,63.72M902.84,214.28c-13.43,0-23.42-7.58-23.42-20.66s11.36-18.94,28.58-22.04l11.71-2.07c9.99-2.07,15.49-3.79,18.94-6.89v15.84c0,21.36-15.49,35.82-35.81,35.82M887.34,249.75c27.55,0,45.11-11.36,54.06-27.89-1.03,5.17-1.38,10.33-1.38,15.5v6.2h46.14v-99.51c0-47.52-21.69-75.07-74.72-75.07-45.8,0-75.75,25.48-78.51,60.6h50.62c1.72-15.5,12.74-24.79,29.61-24.79,15.84,0,24.45,8.95,24.45,19.28,0,7.58-4.47,12.05-17.9,13.77l-24.1,2.75c-35.81,4.48-66.46,17.56-66.46,55.44,0,34.44,28.58,53.72,58.19,53.72M762.01,243.55h49.93V2.52h-49.93v241.03ZM656.99,211.19c-22.73,0-38.57-21-38.57-51.65s16.18-51.65,38.57-51.65c23.76,0,38.22,21,38.22,51.65,0,30.64-15.15,51.65-38.22,51.65M620.83,313.45v-75.75c0-4.48,0-8.95-1.03-15.5,9.99,15.84,24.79,27.55,51.31,27.55,42.01,0,75.06-33.4,75.06-89.87s-31.33-90.91-73.34-90.91c-25.48,0-43.39,12.05-53.03,27.89,1.03-6.89,1.03-10.67,1.03-15.84v-6.2h-49.93v238.63h49.93ZM479.32,249.75c45.8,0,75.07-23.76,75.07-56.82,0-30.99-23.07-45.8-55.09-51.99l-22.73-4.82c-18.25-3.44-24.1-7.92-24.1-16.18,0-10.33,10.67-15.5,23.76-15.5,16.18,0,26.17,9.64,27.55,23.07h49.58c-1.38-34.78-29.96-58.54-76.79-58.54-43.39,0-72.31,22.73-72.31,52.68s20.66,45.45,54.4,52.34l23.76,4.82c15.5,3.1,23.07,7.57,23.07,16.87,0,11.02-10.33,18.59-26.17,18.59-19.28,0-29.96-11.36-30.65-28.24h-50.27c2.06,38.58,32.37,63.72,80.92,63.72M276.5,243.55v-98.82c0-21,13.08-36.5,31.68-36.5,17.56,0,27.89,13.43,27.89,35.81v99.51h49.93v-106.74c0-40.63-21.35-67.83-59.57-67.83-26.51,0-42.7,12.74-51.31,27.89,1.03-6.2,1.38-11.02,1.38-15.5v-6.54h-49.93v168.72h49.93ZM100.89,249.75c64.39,0,101.58-36.5,101.58-100.55V2.52h-53.72v138.77c0,41.66-15.84,63.01-47.52,63.01s-47.52-20.66-47.52-63.01V2.52H0v146.69c0,64.04,36.5,100.54,100.89,100.54"/>
+                                <polygon class="Unsplash0" points="1469.99 0 1433.38 24.9 1433.38 85.54 1469.99 85.54 1469.99 0"/>
+                                <polygon class="Unsplash0" points="1473.7 133.01 1395.87 133.01 1395.87 80.47 1355.38 112.91 1355.38 166.22 1433.38 166.22 1433.38 246.07 1488.59 246.07 1530.21 212.79 1473.7 212.79 1473.7 133.01"/>
+                                <polygon class="Unsplash0" points="1523.39 133 1523.39 166.22 1577.12 166.22 1611.24 133 1523.39 133"/>
+                            </svg>
+                        </a>
+                    </section>  
+                    <section class="netlify">
+    <!-- NETLIFY -->
+                        <a class="netlify-link" href="https://www.netlify.com/" target="_blank" rel="noopenerer">
+                            <svg id="netlify-logo" class="logo-social netlify-logo" version="1.1" viewBox="0 0 128 128">
+                            <defs>
+                                <clipPath id="clippath">
+                                <rect class="netlify0" width="128" height="128"/>
+                                </clipPath>
+                            </defs>
+                            <g class="st4">
+                                <path class="netlify1" d="M125.19,54.77L73.23,2.81l-1.93-1.93-2.13-.89h-10.32l-2.13.89-1.93,1.93L2.81,54.77l-1.93,1.93-.89,2.13v10.32l.89,2.13,1.93,1.93,51.96,51.96,1.93,1.93,2.13.89h10.32l2.13-.89,1.93-1.93,51.96-51.96,1.93-1.93.89-2.13v-10.32l-.89-2.13-1.93-1.93Z"/>
+                                <path class="netlify3" d="M59.37,116.02v-24.96l.66-.66h7.94l.66.66v24.96l-.66.66h-7.94l-.66-.66Z"/>
+                                <path class="netlify3" d="M59.37,36.94V11.98l.66-.66h7.94l.66.66v24.96l-.66.66h-7.94l-.66-.66Z"/>
+                                <path class="netlify3" d="M38.39,97.52h-1.09l-5.46-5.46v-1.09l7.27-7.28h5.78s.77.77.77.77v5.78l-7.27,7.28Z"/>
+                                <path class="netlify3" d="M31.84,37.3v-1.09l5.46-5.46h1.09l7.28,7.28v5.77l-.77.78h-5.78l-7.28-7.28Z"/>
+                                <path class="netlify3" d="M9.86,59.35h28.08l.66.66v7.95l-.66.66H9.86l-.66-.66v-7.95l.66-.66Z"/>
+                                <path class="netlify2" d="M78.88,80.54h-7.94l-.66-.66v-18.58c0-3.31-1.29-5.87-5.29-5.96-2.05-.05-4.4,0-6.91.1l-.38.39v24.05s-.66.66-.66.66h-7.94l-.66-.66v-31.75l.66-.66h17.86c6.94,0,12.57,5.63,12.57,12.57v19.84l-.66.66h0Z"/>
+                                <path class="netlify3" d="M118.14,68.65h-28.08l-.66-.66v-7.95l.66-.66h28.08l.66.66v7.95l-.66.66Z"/>
+                            </g>
+                            </svg>
+                        </a>
+                    </section>
+                    <section class="apple-music">
+                        <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/fr/playlist/pl.u-GgA5klafZDEqVR"></iframe>
+                    </section>
+                </section>
+            </fieldset>
+        </section>
+    </footer>

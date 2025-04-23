@@ -1,0 +1,1131 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Mona Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+	text-align: center;
+	background-color: #333;
+	color: #fdfdfd;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+button {
+	background-color: #444;
+	color: #fdfdfd;
+	border: 1px solid #444;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	font-size: 1rem;
+	cursor: pointer;
+	margin: 2em;
+}
+input {
+	padding: 0.5rem;
+	border-radius: 4px;
+	border: 1px solid #444;
+	background-color: #222;
+	color: #fdfdfd;
+	font-size: 1rem;
+	margin: 2em;
+	text-align: center;
+}
+select {
+	background-color: #222;
+	color: #fdfdfd;
+	border: 1px solid #444;
+	padding: 0.5rem;
+	border-radius: 4px;
+	font-size: 1rem;
+}
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 1rem;
+	background-color: #111;
+	border-radius: 0 0 8px 8px;
+}
+ul {
+	display: flex;
+	list-style: none;
+	padding: 0;
+}
+li {
+	margin: 0 1rem;
+}
+h2 {
+	margin-top: 2% em;
+}
+fieldset {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #444;
+	background-color: #222;
+	color: #fdfdfd;
+	padding: 1rem;
+	border-radius: 8px;
+}
+.title {
+	margin-top: 3em;
+}
+.section-x-height {
+	margin: 10em auto 0 auto;
+	padding: 1em;
+	background-color: #fdfdfd;
+	width: fit-content;
+	transition: .5s;
+	&:hover {
+		scale: 2;
+		border-radius: 10px;
+	}
+}
+#x-height {
+	display: flex;
+}
+body > main > #x-height-description {
+	width: 500px;
+	text-align: justify;
+	margin: 7em auto 0;
+}
+figcaption {
+	margin-top: 1em;
+	color: #333;
+}
+table {
+	border-collapse: collapse;
+	border: 2px solid rgb(140 140 140);
+	font-family: sans-serif;
+	font-size: 1.8rem;
+	letter-spacing: 1px;
+	margin: auto;
+}
+caption {
+	caption-side: bottom;
+	padding: 10px;
+	font-weight: bold;
+}
+th,
+td {
+	border: 1px solid rgb(160 160 160);
+	padding: 8px 10px;
+}
+#tr-relative-up > td {
+	width: 200px;
+	height: 150px;
+	&:nth-child(1) {
+		&:hover {
+			height: 100px;
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+			&::after {
+				content: " = Equal to the computed value of the font-size property of the element on which it is used.";
+			}
+		}
+	}
+	&:nth-child(2) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to the used x-height of the first available font. The x-height is so called because it is often equal to the height of the lowercase.";
+			}
+		}
+	}
+	&:nth-child(3) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to the used cap-height of the first available font. The cap-height is so called because it is approximately equal to the height of a capital Latin letter.";
+			}
+		}
+	}
+	&:nth-child(4) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Represents the typical advance measure of European alphanumeric characters, and measured as the used advance measure of the “0” (ZERO, U+0030) glyph in the font used to render it.";
+			}
+		}
+	}
+	&:nth-child(5) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Represents the typical advance measure of CJK letters, and measured as the used advance measure of the “水” (CJK water ideograph, U+6C34) glyph found in the font used to render it.";
+			}
+		}
+	}
+	&:nth-child(6) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to the computed value of the line-height property of the element on which it is used, converting normal to an absolute length by using only the metrics of the first available font.";
+			}
+		}
+	}
+}
+#tr-relative-down > td {
+	width: 200px;
+	height: 150px;
+	&:nth-child(1) {
+		&:hover {
+			height: 100px;
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to the computed value of the em unit on the root element.";
+			}
+		}
+	}
+	&:nth-child(2) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to the value of the ex unit on the root element.";
+			}
+		}
+	}
+	&:nth-child(3) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to the value of the cap unit on the root element.";
+			}
+		}
+	}
+	&:nth-child(4) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to the value of the ch unit on the root element.";
+			}
+		}
+	}
+	&:nth-child(5) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to the value of the ic unit on the root element.";
+			}
+		}
+	}
+	&:nth-child(6) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to the value of the lh unit on the root element.";
+			}
+		}
+	}
+}
+#tr-vp > td {
+	width: 150px;
+	height: 150px;
+	&:nth-child(1) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to 1% of the width of the large viewport size, small viewport size, large viewport size, and dynamic viewport size, respectively.";
+			}
+		}
+	}
+	&:nth-child(2) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to 1% of the height of the large viewport size, small viewport size, large viewport size, and dynamic viewport size, respectively.";
+			}
+		}
+	}
+	&:nth-child(3) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to 1% of the size of the large viewport size, small viewport size, large viewport size, and dynamic viewport size (respectively) in the box’s inline axis.";
+			}
+		}
+	}
+	&:nth-child(4) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to 1% of the size of the initial containing block large viewport size, small viewport size, large viewport size, and dynamic viewport size (respectively) in the box’s block axis.";
+			}
+		}
+	}
+	&:nth-child(5) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to the smaller of *vw or *vh.";
+			}
+		}
+	}
+	&:nth-child(6) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Equal to the larger of *vw or *vh.";
+			}
+		}
+	}
+}
+#select-absolute > td {
+	width: 150px;
+	height: 150px;
+	&:nth-child(1) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = centimeters 1cm = 96px/2.54in";
+			}
+		}
+	}
+	&:nth-child(2) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = millimeters 1mm = 1/10th of 1cm";
+			}
+		}
+	}
+	&:nth-child(3) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = quarter-millimeters 1Q = 1/40th of 1cm";
+			}
+		}
+	}
+	&:nth-child(4) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = inches 1in = 2.54cm = 96px";
+			}
+		}
+	}
+	&:nth-child(5) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = picas 1pc = 1/6th of 1in";
+			}
+		}
+	}
+	&:nth-child(6) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = points 1pt = 1/72nd of 1in";
+			}
+		}
+	}
+	&:nth-child(7) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = pixels 1px = 1/96th of 1in";
+			}
+		}
+	}
+}
+#select-angle > td {
+	width: 150px;
+	height: 150px;
+	&:nth-child(1) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+			&::after {
+				content: " = Degrees. There are 360 degrees in a full circle.";
+			}
+		}
+	}
+	&:nth-child(2) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+			&::after {
+				content: " = Gradians, also known as 'gons' or 'grades'. There are 400 gradians in a full circle.";
+			}
+		}
+	}
+	&:nth-child(3) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+			&::after {
+				content: " = Radians. There are 2π radians in a full circle.";
+			}
+		}
+	}
+	&:nth-child(4) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+			&::after {
+				content: " = Turns. There is 1 turn in a full circle.";
+			}
+		}
+	}
+}
+#select-angle-example {
+	width: 200px;
+	height: 200px;
+	shape-outside: inset(20px 50px 10px 0 round 50px);
+	border-radius: 10px;
+	border-radius: 100%;
+	margin: 0 auto;
+}
+#select-resolution > td {
+	width: 150px;
+	height: 150px;
+	&:nth-child(1) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Dots per inch.";
+			}
+		}
+	}
+	&:nth-child(2) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Dots per centimeter.";
+			}
+		}
+	}
+	&:nth-child(3) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Dots per px unit.";
+			}
+		}
+	}
+	&:nth-child(4) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = inches 1in = 2.54cm = 96px";
+			}
+		}
+	}
+	&:nth-child(5) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = picas 1pc = 1/6th of 1in";
+			}
+		}
+	}
+	&:nth-child(6) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = points 1pt = 1/72nd of 1in";
+			}
+		}
+	}
+	&:nth-child(7) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = pixels 1px = 1/96th of 1in";
+			}
+		}
+	}
+}
+#select-duration > td {
+	width: 150px;
+	height: 150px;
+	&:nth-child(1) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Seconds.";
+			}
+		}
+	}
+	&:nth-child(2) {
+		&:hover {
+			color: #333;
+			background-color: rgb(253, 253, 253);
+			font-size: 0.5em;
+
+			&::after {
+				content: " = Milliseconds. There are 1000 milliseconds in a second.";
+			}
+		}
+	}
+}
+#select-duration-example {
+	width: 500px;
+	opacity: 0;
+}
+td:last-of-type {
+	text-align: center;
+}
+tfoot th {
+	text-align: right;
+}
+tfoot td {
+	font-weight: bold;
+}
+#select-relative {
+	margin: 1em 0;
+}
+.select-option {
+	cursor: pointer;
+}
+#select-relative-example {
+	font-size: 1em;
+}
+footer {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	background-color: #111;
+	margin-top: 1em;
+	height: 80vh;
+	border-radius: 3% 3% 0 0;
+}
+footer > section > section {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-content: center;
+}
+footer > section > section > section {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+footer > section > section > section > a > img {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	width: 30px;
+	height: 30px;
+	margin: 10px 10px 20px 10px;
+}
+.logo-social {
+	width: 40px;
+	max-width: 100px;
+}
+.logos {
+	& > fieldset {
+		border-radius: 15% 15% 0 0;
+		height: 55vh;
+		& > legend {
+			font-size: 1.5rem;
+		}
+	}
+}
+.logos-parameters {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90vw;
+}
+.adobe {
+	display: flex;
+	justify-content: space-around;
+	width: 6vw;
+}
+.photoshop-link {
+	&::after {
+		content: "Photoshop";
+		display: flex;
+		font-weight: 200;
+		font-size: .6rem;
+	}
+}
+.illustrator-link {
+	&::after {
+		display: flex;
+		content: "Illustrator";
+		font-weight: 200;
+		font-size: .6rem;
+	}
+}
+.microsoft {
+	display: flex;
+	justify-content: space-around;
+	width: 9vw;
+}
+.VSC-link {
+	&::after {
+		content: "VSCode";
+		font-weight: 200;
+		font-size: .6rem;
+	}
+}
+.powerpoint-link {
+	margin-top: 4px;
+	&::after {
+		content: "Powerpoint";
+		font-weight: 200;
+		font-size: .6rem;
+	}
+}
+.github-link {
+	margin-top: 2px;
+	&::after {
+		content: "Github";
+		font-weight: 200;
+		font-size: .6rem;
+	}
+}
+.mozilla {
+	display: flex;
+	justify-content: space-around;
+	width: 9vw;
+}
+.mdn-logo {
+	width: 100px;
+}
+.mdn-link {
+	&::after {
+		display: flex;
+		content: "Mozilla Developper Network";
+		font-weight: 200;
+		font-size: .6rem;
+	}
+}
+.unsplash-logo {
+	width: 100px;
+}
+.unsplash-link {
+	&::after {
+		display: flex;
+		justify-content: center;
+		content: "Unsplash";
+		font-weight: 200;
+		font-size: .6rem;
+	}
+}
+.netlify-logo {
+	width: 50px;
+}
+.netlify-link {
+	&::after {
+		display: flex;
+		justify-content: center;
+		content: "Netlify";
+		font-weight: 200;
+		font-size: .6rem;
+	}
+}
+.photoshop0 {
+	fill: #001e36;
+}
+.photoshop1 {
+	fill: #31a8ff;
+}
+.illustrator0 {
+	fill: #ff9a00;
+}
+.illustrator1 {
+	fill: #300;
+}
+.powerpoint-logo0 {
+	opacity: 0.1;
+}
+.powerpoint-logo0,
+.powerpoint-logo1 {
+	isolation: isolate;
+}
+.powerpoint-logo1 {
+	opacity: 0.2;
+}
+.powerpoint-logo2 {
+	fill: #ff8f6b;
+}
+.powerpoint-logo3 {
+	fill: #fff;
+}
+.powerpoint-logo4 {
+	fill: url(#powerpoint-logo-gradiant);
+}
+.powerpoint-logo5 {
+	fill: #d35230;
+}
+.powerpoint-logo6 {
+	fill: #ed6c47;
+}
+.github0 {
+	fill: #fff;
+}
+.VSC-logo0 {
+	mask: url(#mask);
+}
+.VSC-logo1 {
+	fill: #fff;
+}
+.VSC-logo1,
+.VSC-logo2 {
+	fill-rule: evenodd;
+}
+.VSC-logo3 {
+	fill: #1f9cf0;
+}
+.VSC-logo2 {
+	fill: url(#VSC-grandient);
+}
+.VSC-logo4 {
+	isolation: isolate;
+}
+.VSC-logo5 {
+	fill: #007acc;
+}
+.VSC-logo6 {
+	mix-blend-mode: overlay;
+	opacity: 0.25;
+}
+.VSC-logo7 {
+	fill: #0065a9;
+}
+.mdn-logo0 {
+	fill: #1870f0;
+}
+.mdn-logo1 {
+	fill: #fff;
+}
+.Unsplash0 {
+	fill: #fff;
+}
+.netlify0 {
+	fill: none;
+}
+.netlify1 {
+	fill: #014847;
+}
+.netlify2 {
+	fill: #fff;
+}
+.netlify3 {
+	fill: #32e6e2;
+}
+.netlify4 {
+	clip-path: url(#clippath);
+}
+@media screen and (max-width: 768px) {
+	body > main > .section-x-height {
+		width: 60vw;
+		scale: 1.2;
+	}
+	body > main > section > figure > #x-height {
+		width: 40vw;
+	}
+	body > main > #x-height-description {
+		width: 90vw;
+	}
+	body > main > #tr-relative-table {
+		display: flex;
+		flex-direction: column;
+		& > table > tbody > #tr-relative-up {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+			& > td {
+				height: 50px;
+				width: 200px;
+				&:nth-child(1) {
+					&:hover {
+						height: 130px;
+					}
+				}
+				&:nth-child(2) {
+					&:hover {
+						height: 130px;
+					}
+				}
+				&:nth-child(3) {
+					&:hover {
+						height: 130px;
+					}
+				}
+				&:nth-child(4) {
+					&:hover {
+						height: 130px;
+					}
+				}
+				&:nth-child(5) {
+					&:hover {
+						height: 130px;
+					}
+				}
+				&:nth-child(6) {
+					&:hover {
+						height: 130px;
+					}
+				}
+			}
+		}
+		& > table > tbody > #tr-relative-down {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+			& > td {
+				height: 50px;
+				&:nth-child(1) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(2) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(3) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(4) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(5) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(6) {
+					&:hover {
+						height: 50px;
+					}
+				}
+			}
+		}
+	}
+	body > main > #tr-vp-table {
+		display: flex;
+		flex-direction: column;
+		& > table > tbody > #tr-vp {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+			& > td {
+				height: 50px;
+				width: 200px;
+				&:nth-child(1) {
+					&:hover {
+						height: 100px;
+					}
+				}
+				&:nth-child(2) {
+					&:hover {
+						height: 100px;
+					}
+				}
+				&:nth-child(3) {
+					&:hover {
+						height: 120px;
+					}
+				}
+				&:nth-child(4) {
+					&:hover {
+						height: 150px;
+					}
+				}
+				&:nth-child(5) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(6) {
+					&:hover {
+						height: 50px;
+					}
+				}
+			}
+		}
+	}
+	body > main > #tr-absolute-table {
+		display: flex;
+		flex-direction: column;
+		& > table > tbody > #select-absolute {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+			& > td {
+				height: 50px;
+				width: 200px;
+				&:nth-child(1) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(2) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(3) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(4) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(5) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(6) {
+					&:hover {
+						height: 50px;
+					}
+				}
+			}
+		}
+	}
+	body > main > #tr-angle-table {
+		display: flex;
+		flex-direction: column;
+		& > table > tbody > #select-angle {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+			& > td {
+				height: 50px;
+				width: 200px;
+				&:nth-child(1) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(2) {
+					&:hover {
+						height: 80px;
+					}
+				}
+				&:nth-child(3) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(4) {
+					&:hover {
+						height: 50px;
+					}
+				}
+			}
+		}
+	}
+	body > main > #tr-resolution-table {
+		display: flex;
+		flex-direction: column;
+		& > table > tbody > #select-resolution {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+			& > td {
+				height: 50px;
+				width: 200px;
+				&:nth-child(1) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(2) {
+					&:hover {
+						height: 50px;
+					}
+				}
+				&:nth-child(3) {
+					&:hover {
+						height: 50px;
+					}
+				}
+			}
+		}
+	}
+	body > main > #tr-duration-table > table > tbody > #select-duration {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		& > td {
+			height: 50px;
+			width: 200px;
+			&:nth-child(1) {
+				&:hover {
+					height: 50px;
+				}
+			}
+			&:nth-child(2) {
+				&:hover {
+					height: 50px;
+				}
+			}
+			&:nth-child(3) {
+				&:hover {
+					height: 50px;
+				}
+			}
+		}
+	}
+	#select-duration-example {
+		width: 90vw;
+	}
+	footer {
+		height: 120vh;
+	}
+	footer > .logos > fieldset {
+		height: 100vh;
+		align-items: normal;
+	}
+	footer > .logos > fieldset > .logos-parameters {
+		display: flex;
+		flex-direction: column;
+		& > .adobe {
+			display: flex;
+			justify-content: center;
+			width: 0vw;
+			& > .photoshop-link > svg {
+				margin: 0 2vw;
+			}
+		}
+		& > .microsoft {
+			display: flex;
+			justify-content: center;
+			width: 0vw;
+			& > .VSC-link > svg {
+				margin: 0 2vw;
+			}
+			& > .powerpoint-link > svg {
+				margin: 0 2vw;
+			}
+		}
+		& > .mozilla {
+			display: flex;
+			justify-content: center;
+			width: 0vw;
+		}
+	}
+}
