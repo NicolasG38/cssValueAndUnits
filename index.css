@@ -1,3 +1,6 @@
+html {
+	scroll-behavior: smooth;
+}
 body {
 	margin: 0;
 	padding: 0;
@@ -7,9 +10,16 @@ body {
 	font-style: normal;
 	font-variation-settings: "wdth" 100;
 	text-align: center;
-	background-color: #333;
+	background: repeating-linear-gradient(
+		45deg,
+		#333,
+		#2f2f2f 50px,
+		#424242,
+		#2f2f2f 51px
+	);
 	color: #fdfdfd;
 }
+
 a {
 	text-decoration: none;
 	color: inherit;
@@ -43,14 +53,36 @@ select {
 	border-radius: 4px;
 	font-size: 1rem;
 }
-nav {
+header {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-content: center;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	inset-block-start: 0;
+	backdrop-filter: blur(2rem) saturate(150%);
+	background: hsl(3 3 3 / 0.15);
+	border-block-end: 1px solid hsl(0 0 0 / 0.25);
+	z-index: 50;
 
+	&::after {
+		background: linear-gradient(#333, transparent);
+		content: "";
+		position: fixed;
+		inset-block-start: 0;
+		inset-inline: 0;
+		margin-block-end: -0.125rem;
+		display: block;
+	}
+}
+nav {
+	display: flex;
+	justify-content: end;
+	align-items: center;
 	padding: 1rem;
-	background-color: #111;
 	border-radius: 0 0 8px 8px;
+	width: 50vw;
 }
 ul {
 	display: flex;
@@ -72,6 +104,20 @@ fieldset {
 	color: #fdfdfd;
 	padding: 1rem;
 	border-radius: 8px;
+}
+header > #back-to-top {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	width: 40vw;
+}
+main {
+	& > h1 {
+		position: relative;
+		top: 10vh;
+		margin-bottom: 200px;
+		z-index: 0;
+	}
 }
 .title {
 	margin-top: 3em;
