@@ -78,11 +78,11 @@ header {
 }
 nav {
 	display: flex;
-	justify-content: end;
+	justify-content: center;
 	align-items: center;
 	padding: 1rem;
 	border-radius: 0 0 8px 8px;
-	width: 50vw;
+	width: 33vw;
 }
 ul {
 	display: flex;
@@ -107,15 +107,31 @@ fieldset {
 }
 header > #back-to-top {
 	display: flex;
-	justify-content: end;
+	justify-content: center;
 	align-items: center;
-	width: 40vw;
+	width: 33vw;
 	& > a {
 		&::after {
 			content: "Back to top";
 			display: flex;
 			font-weight: 200;
 			font-size: 0.6rem;
+		}
+	}
+}
+header > .logo-reseaux-sociaux {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 33vw;
+	& {
+		& > a > .logo-social-network {
+			width: 30px;
+			margin: 0 10px;
+			&:hover {
+				transition: 0.5s;
+				transform: scale(1.2);
+			}
 		}
 	}
 }
@@ -668,14 +684,27 @@ main > section > .input-range-color {
 		}
 	}
 }
+
 footer {
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
-	background-color: #111;
 	margin-top: 1em;
-	height: 80vh;
-	border-radius: 3% 3% 0 0;
+	height: 25vh;
+	inset-block-start: 0;
+	backdrop-filter: blur(10px) saturate(150%);
+	background: hsl(0 0 0 / 0.15);
+	border-block-start: 1px solid hsl(0 0 0 / 0.25);
+
+	&::after {
+		background: linear-gradient(#fff, transparent);
+		content: "";
+		position: fixed;
+		inset-block-start: 0;
+		inset-inline: 0;
+		margin-block-end: -0.125rem;
+		display: block;
+	}
 }
 footer > section > section {
 	display: flex;
@@ -704,7 +733,7 @@ footer > section > section > section > a > img {
 .logos {
 	& > fieldset {
 		border-radius: 15% 15% 0 0;
-		height: 55vh;
+		height: 12vh;
 		& > legend {
 			font-size: 1.5rem;
 		}
