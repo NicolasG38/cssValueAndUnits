@@ -644,6 +644,30 @@ tfoot td {
 #select-relative-example {
 	font-size: 1em;
 }
+
+main > section > #color-bar {
+	width: 25vw;
+	height: 40px;
+	background-color: rgb(128, 128, 128);
+	border-radius: 5px;
+	margin: auto;
+}
+main > section > .input-range-color {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+
+	& > section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		& > input {
+			margin: 0 1vw;
+		}
+	}
+}
 footer {
 	display: flex;
 	justify-content: space-around;

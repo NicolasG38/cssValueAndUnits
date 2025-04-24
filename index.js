@@ -23,6 +23,8 @@ const btnAngle = document.getElementById("btn-angle");
 const btnDuration = document.getElementById("btn-duration");
 const btnDurationHide = document.getElementById("btn-duration-hide");
 
+console.log(btnDuration);
+
 btnRelative.addEventListener("click", () => {
 	const index = selectRelative.options.selectedIndex;
 	relativeText.style.fontSize = `${inputRelative.value}${selectRelative.options[index].value}`;
@@ -43,7 +45,7 @@ btnAbsolute.addEventListener("click", () => {
 
 btnAngle.addEventListener("click", () => {
 	const index = selectAngle.options.selectedIndex;
-	angleText.style.background = `conic-gradient(#5cc96d ${inputAngle.value}${selectAngle.options[index].value}, #333 0rad 2rad)`;
+	angleText.style.background = `conic-gradient(#5cc96d ${inputAngle.value}${selectAngle.options[index].value}, transparent 0rad 2rad)`;
 	angleText.innerHTML = `<p style= " margin:0; padding:80px 0;">Angle: ${inputAngle.value}${selectAngle.options[index].value}; </p>`;
 });
 
@@ -56,4 +58,30 @@ btnDuration.addEventListener("click", () => {
 btnDurationHide.addEventListener("click", () => {
 	durationText.style.tranistion = "0.5s";
 	durationText.style.opacity = "0";
+});
+
+const colorInputRed = document.getElementById("color-inputRed");
+const colorInputGreen = document.getElementById("color-inputGreen");
+const colorInputBlue = document.getElementById("color-inputBlue");
+const colorInputAlpha = document.getElementById("color-inputAlpha");
+const colorBar = document.getElementById("color-bar");
+
+colorInputRed.addEventListener("input", () => {
+	colorBar.style.background = `rgb(${colorInputRed.value}, ${colorInputGreen.value}, ${colorInputBlue.value}, ${colorInputAlpha.value})`;
+	colorBar.innerHTML = `<p style="color: white; margin: 0; padding: 10px 0;">rgb(${colorInputRed.value}, ${colorInputGreen.value}, ${colorInputBlue.value}, ${colorInputAlpha.value})</p>`;
+});
+
+colorInputGreen.addEventListener("input", () => {
+	colorBar.style.background = `rgb(${colorInputRed.value}, ${colorInputGreen.value}, ${colorInputBlue.value}, ${colorInputAlpha.value})`;
+	colorBar.innerHTML = `<p style="color: white; margin: 0; padding: 10px 0;">rgb(${colorInputRed.value}, ${colorInputGreen.value}, ${colorInputBlue.value}, ${colorInputAlpha.value})</p>`;
+});
+
+colorInputBlue.addEventListener("input", () => {
+	colorBar.style.background = `rgb(${colorInputRed.value}, ${colorInputGreen.value}, ${colorInputBlue.value}, ${colorInputAlpha.value})`;
+	colorBar.innerHTML = `<p style="color: white; margin: 0; padding: 10px 0;">rgb(${colorInputRed.value}, ${colorInputGreen.value}, ${colorInputBlue.value}, ${colorInputAlpha.value})</p>`;
+});
+
+colorInputAlpha.addEventListener("input", () => {
+	colorBar.style.background = `rgb(${colorInputRed.value}, ${colorInputGreen.value}, ${colorInputBlue.value}, ${colorInputAlpha.value})`;
+	colorBar.innerHTML = `<p style="color: white; margin: 0; padding: 10px 0;">rgb(${colorInputRed.value}, ${colorInputGreen.value}, ${colorInputBlue.value}, ${colorInputAlpha.value})</p>`;
 });

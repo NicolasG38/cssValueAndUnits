@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Page</title>
+    <link rel="icon" type="image/x-icon" href="favicon.webp">
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +18,6 @@
             <ul>
                 <li >CSS Values & Units</li>
             </ul>
-            
         </nav>
         <section id="back-to-top">
             <a href="#top"><img src="arrow_circle_up.svg" alt="back to top" class="backToTopImg"></a>
@@ -141,7 +141,6 @@
             <p id="select-absolute-example">font-size :1cm; </p>
         </section>
 
-
         <h2 class="title">Angle Units</h2>
         <section id="tr-angle-table">
             <table>
@@ -169,8 +168,6 @@
             <div id="select-angle-example"></div>
         </section>
 
-
-
         <h2 class="title">Resolution Units</h2>
         <section id="tr-resolution-table">
             <table>
@@ -190,8 +187,8 @@
             <table >
                 <tbody>
                     <tr id="select-duration">
-                            <td>s</td>
-                            <td>ms</td>
+                        <td>s</td>
+                        <td>ms</td>
                     </tr>
                 </tbody>
             </table>
@@ -208,7 +205,29 @@
             <button type="button" id="btn-duration-hide">Hide picture</button>
         </section>
         <img src="hanny-naibaho-D_LYjtHnDXE-unsplash.jpg" alt="DJ en train de mixer dans festival" id="select-duration-example">
-    </main> 
+        <section>
+            <h2>Colors</h2>
+            <div id="color-bar"><p style="color: white; margin: 0; padding: 10px 0;" >rgb(128, 128, 128, 1)</p></div>
+            <section class="input-range-color">
+                <section>
+                    <p>Red</p>
+                    <input type="range" class="color-input" id="color-inputRed" min="0" value="128" max="255">
+                </section>
+                <section>
+                    <p>Green</p>
+                    <input type="range" class="color-input" id="color-inputGreen" min="0" value="128" max="255">
+                </section>
+                <section>
+                    <p>Blue</p>
+                    <input type="range" class="color-input" id="color-inputBlue" min="0" value="128" max="255">
+                </section>
+                <section>
+                    <p>Alpha</p>
+                    <input type="range" class="color-input" id="color-inputAlpha" min="0" value="1" max="1" step=".01">
+                </section>
+            </section>
+        </section>
+    </main>
 </body>
     <footer>
         <section>        
