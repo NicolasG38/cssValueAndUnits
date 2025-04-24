@@ -85,3 +85,14 @@ colorInputAlpha.addEventListener("input", () => {
 	colorBar.style.background = `rgb(${colorInputRed.value}, ${colorInputGreen.value}, ${colorInputBlue.value}, ${colorInputAlpha.value})`;
 	colorBar.innerHTML = `<p style="color: white; margin: 0; padding: 10px 0;">rgb(${colorInputRed.value}, ${colorInputGreen.value}, ${colorInputBlue.value}, ${colorInputAlpha.value})</p>`;
 });
+
+const menuButton = document.getElementById("menu-button");
+const menu = document.getElementById("menu");
+
+const toggleMenu = () => {
+	const isVisible = window.getComputedStyle(menu).display !== "none";
+	menu.style.display = isVisible ? "none" : "flex";
+	menuButton.setAttribute("aria-expanded", !isVisible);
+};
+
+menuButton.addEventListener("click", toggleMenu);

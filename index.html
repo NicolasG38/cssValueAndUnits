@@ -15,15 +15,24 @@
 <body>
     <header>
         <section class="logo-reseaux-sociaux"> 
-            <a href="https://www.linkedin.com/in/nicolasgirard38/" target="_blank"><img src="InBug-White.png" alt="logo LinkedIn" class="logo-social-network"></a>
-            <a href="https://www.instagram.com/thelazyagency/" target="_blank"><img src="Instagram_Glyph_White.png" alt="logo Instagram" class="logo-social-network"></a>
-            <a href="https://www.threads.net/@thelazyagency" target="_blank"><img src="threads-logo-white-01.png" alt="logo Threads" class="logo-social-network"></a>
+            <a href="https://www.linkedin.com/in/nicolasgirard38/" target="_blank" id="linkedin"><img src="InBug-White.png" alt="logo LinkedIn" class="logo-social-network"></a>
+            <a href="https://www.instagram.com/thelazyagency/" target="_blank" id="instagram"><img src="Instagram_Glyph_White.png" alt="logo Instagram" class="logo-social-network"></a>
+            <a href="https://www.threads.net/@thelazyagency" target="_blank" id="threads"><img src="threads-logo-white-01.png" alt="logo Threads" class="logo-social-network"></a>
         </section>
-        <nav>
-            <ul>
-                <li >CSS Values & Units</li>
-            </ul>
-        </nav>
+        <!-- <nav>
+            <section class="dropdown">
+                <button id="menu-button" aria-label="Menu" aria-expanded="false" aria-controls="menu"> CSS Values & Unit Menu ▾ </button>
+                <ul class="dropdown-menu" id="menu" role="menu" aria-labelledby="menu-button">
+                    <li><a>Relative Units Length</a></li>
+                    <li><a>Viewport-percentage Length</a></li>
+                    <li><a>Absolute Units Length</a></li>
+                    <li><a>Angle Units Length</a></li>
+                    <li><a>Resolution Units Length</a></li>
+                    <li><a>Duration Units</a></li>
+                    <li><a>Colors</a></li>
+                </ul>
+            </section>
+        </nav> -->
         <section id="back-to-top">
             <a href="#top"><img src="arrow_circle_up.svg" alt="back to top" class="backToTopImg"></a>
         </section>
@@ -210,7 +219,7 @@
             <button type="button" id="btn-duration-hide">Hide picture</button>
         </section>
         <img src="hanny-naibaho-D_LYjtHnDXE-unsplash.jpg" alt="DJ en train de mixer dans festival" id="select-duration-example">
-        <section>
+        <section class="color-section">
             <h2>Colors</h2>
             <div id="color-bar"><p style="color: white; margin: 0; padding: 10px 0;" >rgb(128, 128, 128, 1)</p></div>
             <section class="input-range-color">

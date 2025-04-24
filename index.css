@@ -1,5 +1,6 @@
 html {
 	scroll-behavior: smooth;
+	flex-wrap: nowrap;
 }
 body {
 	margin: 0;
@@ -59,6 +60,7 @@ header {
 	align-content: center;
 	position: fixed;
 	width: 100%;
+	height: 100px;
 	top: 0;
 	inset-block-start: 0;
 	backdrop-filter: blur(2rem) saturate(150%);
@@ -76,11 +78,11 @@ header {
 		display: block;
 	}
 }
+
 nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem;
 	border-radius: 0 0 8px 8px;
 	width: 33vw;
 }
@@ -105,11 +107,12 @@ fieldset {
 	padding: 1rem;
 	border-radius: 8px;
 }
+
 header > #back-to-top {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 33vw;
+	width: 50vw;
 	& > a {
 		&::after {
 			content: "Back to top";
@@ -122,27 +125,69 @@ header > #back-to-top {
 header > .logo-reseaux-sociaux {
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	width: 33vw;
-	& {
-		& > a > .logo-social-network {
-			width: 30px;
-			margin: 0 10px;
-			&:hover {
-				transition: 0.5s;
-				transform: scale(1.2);
-			}
+	align-content: center;
+	width: 50vw;
+	transition: .5s;
+	& > a > .logo-social-network {
+		width: 30px;
+		margin: 0 10px;
+		&:hover {
+			transition: 0.5s;
+		}
+	}
+	& > #linkedin {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		&::after {
+			content: "Linkedin";
+			display: flex;
+			justify-content: center;
+			font-weight: 200;
+			font-size: .6rem;
+			margin-top: 5px;
+		}
+	}
+	& > #instagram {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		&::after {
+			content: "Instagram";
+			display: flex;
+			justify-content: center;
+			font-weight: 200;
+			font-size: .6rem;
+			margin-top: 5px;
+		}
+	}
+	& > #threads {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		&::after {
+			content: "Threads";
+			display: flex;
+			justify-content: center;
+			font-weight: 200;
+			font-size: .6rem;
+			margin-top: 5px;
 		}
 	}
 }
+
 main {
 	& > h1 {
 		position: relative;
-		top: 10vh;
-		margin-bottom: 200px;
+		top: 25vh;
+		margin-bottom: 400px;
 		z-index: 0;
 	}
 }
+
 .title {
 	margin-top: 3em;
 }
@@ -694,7 +739,7 @@ footer {
 	inset-block-start: 0;
 	backdrop-filter: blur(10px) saturate(150%);
 	background: hsl(0 0 0 / 0.15);
-	border-block-start: 1px solid hsl(0 0 0 / 0.25);
+	border-block-start: 1px solid hsla(0, 0%, 100%, 0.25);
 
 	&::after {
 		background: linear-gradient(#fff, transparent);
@@ -951,12 +996,12 @@ footer > section > section > section > a > img {
 				width: 200px;
 				&:nth-child(1) {
 					&:hover {
-						height: 130px;
+						height: 90px;
 					}
 				}
 				&:nth-child(2) {
 					&:hover {
-						height: 130px;
+						height: 100px;
 					}
 				}
 				&:nth-child(3) {
@@ -1200,11 +1245,20 @@ footer > section > section > section > a > img {
 	#select-duration-example {
 		width: 90vw;
 	}
+	main > section > #color-bar {
+		width: 80vw;
+	}
+	.color-section {
+		& > .input-range-color {
+			display: flex;
+			flex-direction: column;
+		}
+	}
 	footer {
-		height: 120vh;
+		height: 60vh;
 	}
 	footer > .logos > fieldset {
-		height: 100vh;
+		height: 50vh;
 		align-items: normal;
 	}
 	footer > .logos > fieldset > .logos-parameters {
