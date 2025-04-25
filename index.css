@@ -795,14 +795,7 @@ footer > section > section > section > a > img {
 	justify-content: space-around;
 	width: 6vw;
 }
-.photoshop-link {
-	&::after {
-		content: "Photoshop";
-		display: flex;
-		font-weight: 200;
-		font-size: .6rem;
-	}
-}
+
 .illustrator-link {
 	&::after {
 		display: flex;
@@ -855,6 +848,18 @@ footer > section > section > section > a > img {
 		font-size: .6rem;
 	}
 }
+.figma-logo {
+	width: 60px;
+}
+.figma-link {
+	&::after {
+		display: flex;
+		justify-content: center;
+		content: "Figma";
+		font-weight: 200;
+		font-size: .6rem;
+	}
+}
 .unsplash-logo {
 	width: 100px;
 }
@@ -878,18 +883,6 @@ footer > section > section > section > a > img {
 		font-weight: 200;
 		font-size: .6rem;
 	}
-}
-.photoshop0 {
-	fill: #001e36;
-}
-.photoshop1 {
-	fill: #31a8ff;
-}
-.illustrator0 {
-	fill: #ff9a00;
-}
-.illustrator1 {
-	fill: #300;
 }
 .powerpoint-logo0 {
 	opacity: 0.1;
@@ -972,6 +965,27 @@ footer > section > section > section > a > img {
 .netlify4 {
 	clip-path: url(#clippath);
 }
+
+.figma0 {
+	fill: #24cb71;
+}
+
+.figma1 {
+	fill: #874fff;
+}
+
+.figma2 {
+	fill: #00b6ff;
+}
+
+.figma3 {
+	fill: #ff7237;
+}
+
+.figma4 {
+	fill: #ff3737;
+}
+
 @media screen and (max-width: 768px) {
 	body > main > .section-x-height {
 		width: 60vw;
@@ -1268,9 +1282,6 @@ footer > section > section > section > a > img {
 			display: flex;
 			justify-content: center;
 			width: 0vw;
-			& > .photoshop-link > svg {
-				margin: 0 2vw;
-			}
 		}
 		& > .microsoft {
 			display: flex;
