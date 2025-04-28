@@ -23,8 +23,6 @@ const btnAngle = document.getElementById("btn-angle");
 const btnDuration = document.getElementById("btn-duration");
 const btnDurationHide = document.getElementById("btn-duration-hide");
 
-console.log(btnDuration);
-
 btnRelative.addEventListener("click", () => {
 	const index = selectRelative.options.selectedIndex;
 	relativeText.style.fontSize = `${inputRelative.value}${selectRelative.options[index].value}`;
@@ -89,10 +87,25 @@ colorInputAlpha.addEventListener("input", () => {
 const menuButton = document.getElementById("menu-button");
 const menu = document.getElementById("menu");
 
-const toggleMenu = () => {
-	const isVisible = window.getComputedStyle(menu).display !== "none";
-	menu.style.display = isVisible ? "none" : "flex";
-	menuButton.setAttribute("aria-expanded", !isVisible);
-};
+// const toggleMenu = () => {
+// 	const isVisible = window.getComputedStyle(menu).display !== "none";
+// 	menu.style.display = isVisible ? "none" : "flex";
+// 	menuButton.setAttribute("aria-expanded", !isVisible);
+// };
 
-menuButton.addEventListener("click", toggleMenu);
+// menuButton.addEventListener("click", toggleMenu);
+
+function copy() {
+	const text = `rgb(${colorInputRed.value}, ${colorInputGreen.value}, ${colorInputBlue.value}, ${colorInputAlpha.value})`;
+	const textarea = document.createElement("textarea");
+	textarea.value = text;
+	document.body.appendChild(textarea);
+	textarea.select();
+	try {
+		document.execCommand("copy");
+		alert(`Copié: ${text}`);
+	} catch (err) {
+		console.error("Erreur lors de la copie:", err);
+	}
+	document.body.removeChild(textarea);
+}
